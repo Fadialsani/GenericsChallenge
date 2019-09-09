@@ -7,18 +7,39 @@ public class Main {
         FootBallPlayer joe = new FootBallPlayer("JOE ");
         BaseballPlayer Bat = new BaseballPlayer("BAT ");
         SoccerPlayer sucree = new SoccerPlayer("SUCREE ");
+        FootBallPlayer fadi = new FootBallPlayer("FADI ");
 
-        Team<FootBallPlayer> sabe3team = new Team<>("Sabe3TEAM ");
+        Team<FootBallPlayer> footBallTeam = new Team<>("footBallTeam ");
+        Team<FootBallPlayer> footBallTeam2 = new Team<>("footBallTeam 2");
+        footBallTeam2.addPlayer(joe);
 
-        sabe3team.addPlayer(joe);
-      //  sabe3team.addPlayer(Bat);
-      //  sabe3team.addPlayer(sucree);
+        footBallTeam.addPlayer(fadi);
+       // footBallTeam.addPlayer(sucree);
 
-        System.out.println(sabe3team.numPlayers());
 
-        Team<BaseballPlayer> crows = new Team<>("CROWS ");
+       // System.out.println(footBallTeam.numPlayers());
 
-        crows.addPlayer(Bat);
+        Team<BaseballPlayer> baseBallTeam = new Team<>("baseBallTeam ");
+
+        baseBallTeam.addPlayer(Bat);
+
+        Team<SoccerPlayer> soccerTeam = new Team<>("soccerTeam");
+footBallTeam.matchResult(footBallTeam2,5,3);
+
+footBallTeam2.matchResult(footBallTeam,1,0);
+        footBallTeam.matchResult(footBallTeam2,1,3);
+
+        soccerTeam.addPlayer(sucree);
+//baseBallTeam.matchResult(footBallTeam,5,0);
+
+        System.out.println("RANKING \n ==============================================");
+        System.out.println(footBallTeam.getName() +"RANK is = " + footBallTeam.ranking());
+        System.out.println(footBallTeam2.getName() +"RANK is = " + footBallTeam2.ranking());
+
+        System.out.println(footBallTeam.compareTo(footBallTeam2));
+        System.out.println(footBallTeam2.compareTo(footBallTeam));
+
+
 
     }
 }
