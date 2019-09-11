@@ -39,6 +39,14 @@ footBallTeam2.matchResult(footBallTeam,1,0);
         System.out.println(footBallTeam.compareTo(footBallTeam2));
         System.out.println(footBallTeam2.compareTo(footBallTeam));
 
+        League<Team<FootBallPlayer>> league = new League<>("with Type");
+
+        league.addTeam(footBallTeam);
+        league.addTeam(footBallTeam2);
+
+        league.showLeageTable();
+
+
 
 
     }
